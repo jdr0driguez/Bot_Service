@@ -1,0 +1,12 @@
+{
+  "username": "1000256095",
+  "password": "1000256095",
+  "unitId": "140",
+  "upload_headers": {
+    "gestion_fecha": "fecha_gestion",
+    "deudor_identificacion": "identificacion",
+    "valor": "valor_compromiso"
+  },
+  "delimitador": ";",
+  "archivo": "PruebaMasiva.csv"
+}

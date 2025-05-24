@@ -1,0 +1,41 @@
+2025-05-21 18:13:46 [INFO] Iniciando subida del archivo: C:\Users\Desarrollo\Documents\archivo_descargado.csv
+2025-05-21 18:13:51 [ERROR] ❌ Error al enviar archivo: 400 Client Error: Bad Request for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
+Traceback (most recent call last):
+  File "c:\Users\Desarrollo\Documents\Bots Python\Bot_ServiceBot\sendAPI.py", line 81, in enviar_csv
+    response.raise_for_status()
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
+2025-05-21 18:20:11 [INFO] Iniciando subida del archivo: C:\Users\Desarrollo\Documents\archivo_descargado.csv
+2025-05-21 18:30:13 [ERROR] ❌ Error al enviar archivo: 504 Server Error: Gateway Time-out for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
+Traceback (most recent call last):
+  File "c:\Users\Desarrollo\Documents\Bots Python\Bot_ServiceBot\sendAPI.py", line 82, in enviar_csv
+    response.raise_for_status()
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 504 Server Error: Gateway Time-out for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
+2025-05-21 18:42:25 [INFO] Iniciando subida del archivo: C:\Users\Desarrollo\Documents\archivo_descargado.csv
+2025-05-21 18:52:28 [ERROR] ❌ Error al enviar archivo: 504 Server Error: Gateway Time-out for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
+Traceback (most recent call last):
+  File "C:\Users\Desarrollo\Documents\Bots Python\Bot_ServiceBot\sendAPI.py", line 83, in enviar_csv
+    response.raise_for_status()
+  File "C:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 504 Server Error: Gateway Time-out for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
+2025-05-21 19:55:38 [INFO] Iniciando subida del archivo: C:\Users\Desarrollo\Documents\archivo_descargado.csv
+2025-05-21 19:55:39 [ERROR] ❌ Error al enviar archivo: 400 Client Error: Bad Request for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
+Traceback (most recent call last):
+  File "C:\Users\Desarrollo\Documents\Bots Python\Bot_ServiceBot\sendAPI.py", line 83, in enviar_csv
+    response.raise_for_status()
+  File "C:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
+2025-05-21 19:58:26 [INFO] Iniciando subida del archivo: C:\Users\Desarrollo\Documents\archivo_descargado.csv
+2025-05-21 19:58:26 [ERROR] ❌ Error al enviar archivo: 400 Client Error: Bad Request for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
+Traceback (most recent call last):
+  File "C:\Users\Desarrollo\Documents\Bots Python\Bot_ServiceBot\sendAPI.py", line 83, in enviar_csv
+    response.raise_for_status()
+  File "C:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
+2025-05-21 20:01:28 [INFO] Iniciando subida del archivo: C:\Users\Desarrollo\Documents\archivo_descargado.csv

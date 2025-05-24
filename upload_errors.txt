@@ -1,0 +1,15 @@
+2025-05-21 18:13:51 ERROR al enviar archivo:
+400 Client Error: Bad Request for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
+
+2025-05-21 18:30:13 ERROR al enviar archivo:
+504 Server Error: Gateway Time-out for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
+
+2025-05-21 18:52:28 ERROR al enviar archivo:
+504 Server Error: Gateway Time-out for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
+
+2025-05-21 19:55:39 ERROR al enviar archivo:
+400 Client Error: Bad Request for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
+
+2025-05-21 19:58:26 ERROR al enviar archivo:
+400 Client Error: Bad Request for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
+

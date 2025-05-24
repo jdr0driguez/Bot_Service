@@ -140,6 +140,8 @@ def download_csv_selenium(driver):
         # Cerrar dropdown con ESC
         search_input.send_keys(Keys.ESCAPE)
 
+        time.sleep(5)
+
 
         wait = WebDriverWait(driver, 10)
         actions = ActionChains(driver)

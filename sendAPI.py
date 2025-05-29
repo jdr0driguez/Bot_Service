@@ -75,7 +75,10 @@ def enviar_csv(token):
             response = requests.post(
                 UPLOAD_URL,
                 headers=headers,
-                data=form_data,
+                data={
+                "headers": CSV_HEADERS_JSON,
+                "delimitador": ","
+            },
                 files=files,
                 verify=False,
             )

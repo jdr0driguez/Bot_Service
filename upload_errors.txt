@@ -13,3 +13,21 @@
 2025-05-21 19:58:26 ERROR al enviar archivo:
 400 Client Error: Bad Request for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
 
+2025-05-27 15:10:33 ERROR al enviar archivo:
+HTTPSConnectionPool(host='wiser.cobrandobpo.com.co', port=443): Read timed out. (read timeout=3600)
+
+2025-05-27 16:17:08 ERROR al enviar archivo:
+504 Server Error: Gateway Time-out for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
+
+2025-05-27 17:17:06 ERROR al enviar archivo:
+('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+2025-05-27 18:24:40 ERROR al enviar archivo:
+504 Server Error: Gateway Time-out for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
+
+2025-05-27 18:25:45 ERROR al enviar archivo:
+504 Server Error: Gateway Time-out for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
+
+2025-05-27 19:18:13 ERROR al enviar archivo:
+502 Server Error: Bad Gateway for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
+

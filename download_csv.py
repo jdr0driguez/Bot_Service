@@ -35,6 +35,7 @@ def download_csv_selenium(driver):
             "ENTIDAD Falabella",
             "Entidad FALABELLA",
             "FALABELLA",
+            "Falabella",
             "Prueba Falabella"
         ]
 
@@ -53,13 +54,44 @@ def download_csv_selenium(driver):
             EC.element_to_be_clickable((By.CSS_SELECTOR, 'span[title="Reporte Unicos"]'))
         )
 
-        driver.execute_script("document.querySelector('span[title=\"Reporte Unicos\"]').click();")
+        driver.execute_script("document.querySelector('span[title=\"Total Gestión\"]').click();")
 
         time.sleep(5)
 
         driver.execute_script("document.getElementById('sheet_control_panel_header').click();")
 
         time.sleep(5)
+
+        # 1) Abrir dropdown de “Resultado de Gestión”
+        dropdown_gestion = WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable(
+                (By.CSS_SELECTOR, '[data-automation-id="sheet_control_value"][data-automation-context="Resultado de Gestión"]')
+            )
+        )
+        dropdown_gestion.click()
+        time.sleep(0.5)
+        # a veces .click() directo falla si está fuera de pantalla
+
+        # 2) Localiza el <li> “Select all” y clickea sobre él
+        select_all_item = WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable((
+                By.CSS_SELECTOR,
+                'li[data-automation-id="dropdown_select_all_search_result_entry"]'
+            ))
+        )
+        select_all_item.click()
+        time.sleep(0.5)
+
+        # 2) (Opcional) Verifica que ahora el input esté checked
+        checkbox = select_all_item.find_element(
+            By.CSS_SELECTOR, 'input[type="checkbox"][aria-label="Select all"]'
+        )
+        assert checkbox.is_selected(), "¡Ups! El checkbox no se marcó."
+
+        # 3) Cierra el menú si lo necesitas
+        from selenium.webdriver.common.keys import Keys
+        checkbox.send_keys(Keys.ESCAPE)
+        time.sleep(0.5)
 
 
         # PRUEBA FILTRO DIARIO
@@ -140,7 +172,7 @@ def download_csv_selenium(driver):
         # Cerrar dropdown con ESC
         search_input.send_keys(Keys.ESCAPE)
 
-        time.sleep(5)
+        time.sleep(10)
 
 
         wait = WebDriverWait(driver, 10)
@@ -148,7 +180,7 @@ def download_csv_selenium(driver):
 
         # Encontrar el contenedor de la tabla
         tabla = wait.until(EC.presence_of_element_located(
-            (By.ID, 'block-e0f7648e-bf39-4d90-8a1a-042933ba4471_ffe0b6d9-3fa0-46da-af01-b9b50ed55d9f')
+            (By.ID, 'block-e0f7648e-bf39-4d90-8a1a-042933ba4471_85c364e7-5fb8-411f-b136-6a6ea5946ecd')
         ))
 
         # Hover para que aparezca el menú
@@ -168,9 +200,10 @@ def download_csv_selenium(driver):
         ))
         driver.execute_script("arguments[0].click();", export_csv)
 
-        time.sleep(6)
+        time.sleep(10)
 
         # Nombre del archivo
+        nombre_archivo = CSV_FILENAME
         nombre_archivo = CSV_FILENAME
 
         # Ruta de destino donde se guardará el archivo

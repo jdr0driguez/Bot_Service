@@ -78,7 +78,6 @@ def enviar_csv(token):
                 data=form_data,
                 files=files,
                 verify=False,
-                timeout=3600
             )
             response.raise_for_status()
 

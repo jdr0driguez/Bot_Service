@@ -39,3 +39,203 @@ Traceback (most recent call last):
     raise HTTPError(http_error_msg, response=self)
 requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
 2025-05-21 20:01:28 [INFO] Iniciando subida del archivo: C:\Users\Desarrollo\Documents\archivo_descargado.csv
+2025-05-24 01:50:07 [INFO] Iniciando subida del archivo: C:\Users\Desarrollo\Documents\archivo_descargado.csv
+2025-05-24 02:15:56 [INFO] Iniciando subida del archivo: C:\Users\Desarrollo\Documents\archivo_descargado.csv
+2025-05-26 14:11:02 [INFO] Iniciando subida del archivo: C:\Users\Desarrollo\Documents\archivo_descargado.csv
+2025-05-26 14:51:32 [INFO] ✅ Archivo enviado exitosamente.
+2025-05-26 14:51:32 [INFO] Respuesta del servidor: {"status":true,"message":"Cargue de compromisos realizado de forma exitosa!","data":{"show_summary":true,"number_records_loaded":{"gestiones":11924,"compromisos":10},"number_records_not_loaded":0,"number_records_error":0,"summary_errors":[],"file_name_errors":null}}
+2025-05-26 17:57:49 [INFO] Iniciando subida del archivo: C:\Users\Desarrollo\Documents\archivo_descargado.csv
+2025-05-26 18:26:39 [INFO] ✅ Archivo enviado exitosamente.
+2025-05-26 18:26:39 [INFO] Respuesta del servidor: {"status":true,"message":"Cargue de compromisos realizado de forma exitosa!","data":{"show_summary":true,"number_records_loaded":{"gestiones":16073,"compromisos":2},"number_records_not_loaded":0,"number_records_error":0,"summary_errors":[],"file_name_errors":null}}
+2025-05-27 09:18:32 [INFO] Iniciando subida del archivo: C:\Users\Desarrollo\Documents\archivo_descargado.csv
+2025-05-27 09:20:17 [INFO] ✅ Archivo enviado exitosamente.
+2025-05-27 09:20:17 [INFO] Respuesta del servidor: {"status":true,"message":"Cargue de compromisos realizado de forma exitosa!","data":{"show_summary":true,"number_records_loaded":{"gestiones":930,"compromisos":2},"number_records_not_loaded":0,"number_records_error":0,"summary_errors":[],"file_name_errors":null}}
+2025-05-27 14:07:08 [INFO] Iniciando subida del archivo: C:\Users\Desarrollo\Documents\archivo_descargado.csv
+2025-05-27 14:10:23 [INFO] Iniciando subida del archivo: C:\Users\Desarrollo\Documents\archivo_descargado.csv
+2025-05-27 15:10:33 [ERROR] ❌ Error al enviar archivo: HTTPSConnectionPool(host='wiser.cobrandobpo.com.co', port=443): Read timed out. (read timeout=3600)
+Traceback (most recent call last):
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1378, in getresponse
+    response.begin()
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 706, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\ssl.py", line 1278, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\ssl.py", line 1134, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='wiser.cobrandobpo.com.co', port=443): Read timed out. (read timeout=3600)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Desarrollo\Documents\Bots Python\Bot_ServiceBot\sendAPI.py", line 75, in enviar_csv
+    response = requests.post(
+               ^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\adapters.py", line 713, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='wiser.cobrandobpo.com.co', port=443): Read timed out. (read timeout=3600)
+2025-05-27 15:16:56 [INFO] Iniciando subida del archivo: C:\Users\Desarrollo\Documents\archivo_descargado.csv
+2025-05-27 16:17:08 [ERROR] ❌ Error al enviar archivo: 504 Server Error: Gateway Time-out for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
+Traceback (most recent call last):
+  File "c:\Users\Desarrollo\Documents\Bots Python\Bot_ServiceBot\sendAPI.py", line 82, in enviar_csv
+    response.raise_for_status()
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 504 Server Error: Gateway Time-out for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
+2025-05-27 16:38:26 [INFO] Iniciando subida del archivo: C:\Users\Desarrollo\Documents\archivo_descargado.csv
+2025-05-27 17:17:06 [ERROR] ❌ Error al enviar archivo: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+Traceback (most recent call last):
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1378, in getresponse
+    response.begin()
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 287, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1378, in getresponse
+    response.begin()
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 287, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Desarrollo\Documents\Bots Python\Bot_ServiceBot\sendAPI.py", line 75, in enviar_csv
+    response = requests.post(
+               ^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\adapters.py", line 682, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-05-27 17:24:29 [INFO] Iniciando subida del archivo: C:\Users\Desarrollo\Documents\archivo_descargado.csv
+2025-05-27 17:25:33 [INFO] Iniciando subida del archivo: C:\Users\Desarrollo\Documents\archivo_descargado.csv
+2025-05-27 18:24:40 [ERROR] ❌ Error al enviar archivo: 504 Server Error: Gateway Time-out for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
+Traceback (most recent call last):
+  File "c:\Users\Desarrollo\Documents\Bots Python\Bot_ServiceBot\sendAPI.py", line 82, in enviar_csv
+    response.raise_for_status()
+  File "C:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 504 Server Error: Gateway Time-out for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
+2025-05-27 18:25:45 [ERROR] ❌ Error al enviar archivo: 504 Server Error: Gateway Time-out for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
+Traceback (most recent call last):
+  File "c:\Users\Desarrollo\Documents\Bots Python\Bot_ServiceBot\sendAPI.py", line 82, in enviar_csv
+    response.raise_for_status()
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 504 Server Error: Gateway Time-out for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
+2025-05-27 18:30:48 [INFO] Iniciando subida del archivo: C:\Users\Desarrollo\Documents\archivo_descargado.csv
+2025-05-27 18:32:46 [INFO] Iniciando subida del archivo: C:\Users\Desarrollo\Documents\archivo_descargado.csv
+2025-05-27 19:18:13 [ERROR] ❌ Error al enviar archivo: 502 Server Error: Bad Gateway for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
+Traceback (most recent call last):
+  File "c:\Users\Desarrollo\Documents\Bots Python\Bot_ServiceBot\sendAPI.py", line 82, in enviar_csv
+    response.raise_for_status()
+  File "c:\Users\Desarrollo\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 502 Server Error: Bad Gateway for url: https://wiser.cobrandobpo.com.co/cargues-propia/cargues/compromisos-genericos
+2025-05-28 08:13:27 [INFO] Iniciando subida del archivo: C:\Users\Desarrollo\Documents\archivo_descargado.csv
+2025-05-28 08:21:00 [INFO] ✅ Archivo enviado exitosamente.
+2025-05-28 08:21:00 [INFO] Respuesta del servidor: {"status":true,"message":"Cargue de compromisos realizado de forma exitosa!","data":{"show_summary":true,"number_records_loaded":{"gestiones":4023,"compromisos":1},"number_records_not_loaded":0,"number_records_error":0,"summary_errors":[],"file_name_errors":null}}
+2025-05-28 14:01:51 [INFO] Iniciando subida del archivo: C:\Users\Desarrollo\Documents\archivo_descargado.csv
+2025-05-28 14:47:35 [INFO] ✅ Archivo enviado exitosamente.
+2025-05-28 14:47:35 [INFO] Respuesta del servidor: {"status":true,"message":"Cargue de compromisos realizado de forma exitosa!","data":{"show_summary":true,"number_records_loaded":{"gestiones":26650,"compromisos":2},"number_records_not_loaded":0,"number_records_error":0,"summary_errors":[],"file_name_errors":null}}
+2025-05-28 17:32:33 [INFO] Iniciando subida del archivo: C:\Users\Desarrollo\Documents\archivo_descargado.csv
+2025-05-28 18:30:56 [INFO] ✅ Archivo enviado exitosamente.
+2025-05-28 18:30:56 [INFO] Respuesta del servidor: {"status":true,"message":"Cargue de compromisos realizado de forma exitosa!","data":{"show_summary":true,"number_records_loaded":{"gestiones":35720,"compromisos":0},"number_records_not_loaded":0,"number_records_error":0,"summary_errors":[],"file_name_errors":null}}

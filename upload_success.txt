@@ -1,18 +1,27 @@
-2025-05-26 14:51:32 SUCCESS:
-{"status":true,"message":"Cargue de compromisos realizado de forma exitosa!","data":{"show_summary":true,"number_records_loaded":{"gestiones":11924,"compromisos":10},"number_records_not_loaded":0,"number_records_error":0,"summary_errors":[],"file_name_errors":null}}
+2025-05-30 15:33:46 SUCCESS:
+{"message":"Archivo recibido y en proceso","jobId":"9"}
 
-2025-05-26 18:26:39 SUCCESS:
-{"status":true,"message":"Cargue de compromisos realizado de forma exitosa!","data":{"show_summary":true,"number_records_loaded":{"gestiones":16073,"compromisos":2},"number_records_not_loaded":0,"number_records_error":0,"summary_errors":[],"file_name_errors":null}}
+2025-05-30 16:44:11 SUCCESS:
+{"message":"Archivo recibido y en proceso","jobId":"10"}
 
-2025-05-27 09:20:17 SUCCESS:
-{"status":true,"message":"Cargue de compromisos realizado de forma exitosa!","data":{"show_summary":true,"number_records_loaded":{"gestiones":930,"compromisos":2},"number_records_not_loaded":0,"number_records_error":0,"summary_errors":[],"file_name_errors":null}}
+2025-06-03 08:54:45 SUCCESS:
+{"message":"Archivo recibido y en proceso","jobId":"10"}
 
-2025-05-28 08:21:00 SUCCESS:
-{"status":true,"message":"Cargue de compromisos realizado de forma exitosa!","data":{"show_summary":true,"number_records_loaded":{"gestiones":4023,"compromisos":1},"number_records_not_loaded":0,"number_records_error":0,"summary_errors":[],"file_name_errors":null}}
+2025-06-03 21:54:15 SUCCESS:
+{"message":"Archivo recibido y en proceso","jobId":"20"}
 
-2025-05-28 14:47:35 SUCCESS:
-{"status":true,"message":"Cargue de compromisos realizado de forma exitosa!","data":{"show_summary":true,"number_records_loaded":{"gestiones":26650,"compromisos":2},"number_records_not_loaded":0,"number_records_error":0,"summary_errors":[],"file_name_errors":null}}
+2025-06-04 15:37:10 SUCCESS:
+{"message":"Archivo recibido y en proceso","jobId":"27"}
 
-2025-05-28 18:30:56 SUCCESS:
-{"status":true,"message":"Cargue de compromisos realizado de forma exitosa!","data":{"show_summary":true,"number_records_loaded":{"gestiones":35720,"compromisos":0},"number_records_not_loaded":0,"number_records_error":0,"summary_errors":[],"file_name_errors":null}}
+2025-06-05 14:11:41 SUCCESS:
+{"message":"Archivo recibido y en proceso","jobId":"6"}
+
+2025-06-05 18:20:44 SUCCESS:
+{"message":"Archivo recibido y en proceso","jobId":"10"}
+
+2025-06-05 18:59:07 SUCCESS:
+{"message":"Archivo recibido y en proceso","jobId":"11"}
+
+2025-06-05 19:04:32 SUCCESS:
+{"message":"Archivo recibido y en proceso","jobId":"12"}
 

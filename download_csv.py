@@ -393,6 +393,8 @@ def download_csv_selenium(driver):
                     except Exception as e:
                         print("❌ No se pudo confirmar sobrescritura:", e)
 
+            time.sleep(3)
+    
         else:
             print("❌ No se encontró la ventana 'Guardar como' / 'Save As'")
 

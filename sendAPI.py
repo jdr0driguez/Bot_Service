@@ -51,6 +51,8 @@ handler.setFormatter(logging.Formatter(
 logger.addHandler(handler)
 
 def enviar_csv(token):
+
+
     """
     Envía un CSV vía POST y hace logging de todo el proceso:
     - upload.log: información general y trazas de error
@@ -92,6 +94,9 @@ def enviar_csv(token):
 
         logger.info(success_msg)
         logger.info(f"Respuesta del servidor: {response.text}")
+
+        os.remove(ruta_archivo)
+        print("Archivo eliminado correctamente.")
 
         with open('upload_success.txt', 'a', encoding='utf-8') as out:
             out.write(f"{datetime.now():%Y-%m-%d %H:%M:%S} SUCCESS:\n")

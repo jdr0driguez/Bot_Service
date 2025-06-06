@@ -27,3 +27,6 @@
 2025-06-05 19:04:32 [INFO] Iniciando subida del archivo: C:\Users\Desarrollo\Documents\archivo_descargado.csv
 2025-06-05 19:04:32 [INFO] ✅ Archivo enviado exitosamente.
 2025-06-05 19:04:32 [INFO] Respuesta del servidor: {"message":"Archivo recibido y en proceso","jobId":"12"}
+2025-06-06 12:44:50 [INFO] Iniciando subida del archivo: C:\Users\Desarrollo\Documents\archivo_descargado.csv
+2025-06-06 12:44:55 [INFO] ✅ Archivo enviado exitosamente.
+2025-06-06 12:44:55 [INFO] Respuesta del servidor: {"message":"Archivo recibido y en proceso","jobId":"2"}

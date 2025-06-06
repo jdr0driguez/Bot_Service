@@ -51,6 +51,20 @@ def download_csv_selenium(driver):
             "MI BANCO"
         ]
 
+        # Lista de valores a seleccionar INCOMERCIO
+
+        valores_a_seleccionarIncomercio = [
+            "INCOMERCIO"
+        ]
+
+
+# Lista de valores a seleccionar TOYOTA
+
+        valores_a_seleccionarToyota = [
+            "TOYOTA"
+        ]
+
+
         # Ir al sitio directamente
         driver.get(BASE_URL + COMPLE_BASEURL)
         time.sleep(6)
@@ -290,6 +304,114 @@ def download_csv_selenium(driver):
 
         # Cerrar dropdown con ESC
         search_input.send_keys(Keys.ESCAPE)
+
+
+        # FILTRO INCOMERCIO
+        dropdown_company = wait.until(EC.element_to_be_clickable(
+            (By.CSS_SELECTOR, '[data-automation-id="sheet_control_value"][data-automation-context="Company"]')
+        ))
+        dropdown_company.click()
+        time.sleep(0.5)
+
+        # Buscar y desmarcar "Select all" si está seleccionado
+        try:
+            select_all_checkbox = wait.until(EC.presence_of_element_located(
+                (By.CSS_SELECTOR, '[data-automation-id="dropdown_select_all_search_result_entry"] input[type="checkbox"]')
+            ))
+
+            is_checked = driver.execute_script("return arguments[0].checked;", select_all_checkbox)
+            if is_checked:
+                driver.execute_script("arguments[0].click();", select_all_checkbox)
+                time.sleep(0.5)
+        except Exception as e:
+            print(f"No se pudo desmarcar 'Select all': {e}")
+
+
+        # Buscar "credi" en el input de búsqueda
+        search_input = wait.until(EC.presence_of_element_located(
+            (By.CSS_SELECTOR, 'input[aria-label="Search value"]')
+        ))
+        search_input.clear()
+        search_input.send_keys("INCOMERC")
+        time.sleep(1)
+
+        # Esperar opciones
+        opciones = wait.until(EC.presence_of_all_elements_located(
+            (By.CSS_SELECTOR, '[data-automation-id="param_value_as_entry"]')
+        ))
+
+        # Clic en cada opción deseada
+        for valor in valores_a_seleccionarIncomercio:
+            try:
+                # Re-obtener todas las opciones activas en el DOM actual
+                opciones = driver.find_elements(By.CSS_SELECTOR, '[data-automation-id="param_value_as_entry"]')
+
+                for opcion in opciones:
+                    label = opcion.text.strip()
+                    if label == valor:
+                        checkbox = opcion.find_element(By.CSS_SELECTOR, '[data-automation-id="multi-select-control"] input[type="checkbox"]')
+                        driver.execute_script("arguments[0].click();", checkbox)
+                        time.sleep(0.2)
+                        break  # ya lo encontramos, salimos del inner loop
+            except Exception as e:
+                print(f"Error seleccionando '{valor}': {e}")
+
+        # Cerrar dropdown con ESC
+        search_input.send_keys(Keys.ESCAPE)
+
+                # 1. FILTRO INCOMERCIO
+        dropdown_company = wait.until(EC.element_to_be_clickable(
+            (By.CSS_SELECTOR, '[data-automation-id="sheet_control_value"][data-automation-context="Company"]')
+        ))
+        dropdown_company.click()
+        time.sleep(0.5)
+
+        # Buscar y desmarcar "Select all" si está seleccionado
+        try:
+            select_all_checkbox = wait.until(EC.presence_of_element_located(
+                (By.CSS_SELECTOR, '[data-automation-id="dropdown_select_all_search_result_entry"] input[type="checkbox"]')
+            ))
+
+            is_checked = driver.execute_script("return arguments[0].checked;", select_all_checkbox)
+            if is_checked:
+                driver.execute_script("arguments[0].click();", select_all_checkbox)
+                time.sleep(0.5)
+        except Exception as e:
+            print(f"No se pudo desmarcar 'Select all': {e}")
+
+
+        # Buscar "credi" en el input de búsqueda
+        search_input = wait.until(EC.presence_of_element_located(
+            (By.CSS_SELECTOR, 'input[aria-label="Search value"]')
+        ))
+        search_input.clear()
+        search_input.send_keys("TOYO")
+        time.sleep(1)
+
+        # Esperar opciones
+        opciones = wait.until(EC.presence_of_all_elements_located(
+            (By.CSS_SELECTOR, '[data-automation-id="param_value_as_entry"]')
+        ))
+
+        # Clic en cada opción deseada
+        for valor in valores_a_seleccionarToyota:
+            try:
+                # Re-obtener todas las opciones activas en el DOM actual
+                opciones = driver.find_elements(By.CSS_SELECTOR, '[data-automation-id="param_value_as_entry"]')
+
+                for opcion in opciones:
+                    label = opcion.text.strip()
+                    if label == valor:
+                        checkbox = opcion.find_element(By.CSS_SELECTOR, '[data-automation-id="multi-select-control"] input[type="checkbox"]')
+                        driver.execute_script("arguments[0].click();", checkbox)
+                        time.sleep(0.2)
+                        break  # ya lo encontramos, salimos del inner loop
+            except Exception as e:
+                print(f"Error seleccionando '{valor}': {e}")
+
+        # Cerrar dropdown con ESC
+        search_input.send_keys(Keys.ESCAPE)
+
 
         time.sleep(20)
 
